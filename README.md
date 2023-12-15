@@ -1,8 +1,8 @@
 # Requesitos funcionais
 
 [x] Deve ser possivel se cadastrar;
-[ ] Deve ser possivel se autenticar;
-[ ] Deve ser possivel obter o perfil de um usuário logado;
+[x] Deve ser possivel se autenticar;
+[x] Deve ser possivel obter o perfil de um usuário logado;
 [ ] Deve ser possivel obter o númerode check-ins realizados pelo usuários logado;
 [ ] Deve ser possivel o usuário obter seu histórico de check-ins;
 [ ] Deve ser possivel o usuário buscar academias próximas;
