@@ -2,31 +2,19 @@ import { Gym } from '@prisma/client'
 import { GymsRepository } from '@/repositories/gyms-repository'
 
 interface SearchGymsServiceRequest {
-  title: string
-  description: string | null
-  phone: string | null
-  latitude: number
-  longitude: number
+  query: string
+  page: number
 }
 interface SearchGymsServiceResponse {
-  gym: Gym
+  gyms: Gym[]
 }
 export class SearchGymsService {
   constructor(private gymRepository: GymsRepository) {}
   async execute({
-    title,
-    description,
-    phone,
-    latitude,
-    longitude,
+    query,
+    page,
   }: SearchGymsServiceRequest): Promise<SearchGymsServiceResponse> {
-    const gym = await this.gymRepository.create({
-      title,
-      description,
-      phone,
-      latitude,
-      longitude,
-    })
-    return { gym }
+    const gyms = await this.gymRepository.searchMany(query, page)
+    return { gyms }
   }
 }
