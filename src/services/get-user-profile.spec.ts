@@ -27,7 +27,7 @@ describe('Get user profile Service', () => {
   })
 
   it('shoud not be able to get user profile with wrong id', async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         userId: 'invalid-user-id',
       }),
