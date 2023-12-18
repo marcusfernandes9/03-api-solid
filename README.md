@@ -3,13 +3,13 @@
 [x] Deve ser possivel se cadastrar;
 [x] Deve ser possivel se autenticar;
 [x] Deve ser possivel obter o perfil de um usuário logado;
-[ ] Deve ser possivel obter o númerode check-ins realizados pelo usuários logado;
+[ ] Deve ser possivel obter o número de check-ins realizados pelo usuários logado;
 [ ] Deve ser possivel o usuário obter seu histórico de check-ins;
 [ ] Deve ser possivel o usuário buscar academias próximas;
 [ ] Deve ser possivel o usuário buscar academias pelo nome;
-[ ] Deve ser possivel o usuário realizar check-in em uma academia;
+[x] Deve ser possivel o usuário realizar check-in em uma academia;
 [ ] Deve ser possivel validar o check-in de um usuário;
-[ ] Deve ser possivel cadastrar uma academia;
+[x] Deve ser possivel cadastrar uma academia;
 
 # Regras de negócio
 
