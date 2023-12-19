@@ -1,5 +1,4 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { hash } from 'bcryptjs'
 import { CheckInService } from './check-in'
 import { InMemoryCheckInsRepository } from '@/repositories/in-memory/in-memory-check-ins-repository'
 import { InMemoryGymsRepository } from '@/repositories/in-memory/in-memory-gyms-repository'
@@ -46,7 +45,7 @@ describe('Check-in Service', () => {
   it('shoud not be able to check in twice in the same day', async () => {
     vi.setSystemTime(new Date(2023, 0, 10, 8, 0, 0))
 
-    const { checkIn } = await sut.execute({
+    await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
       userLatitude: -3.0355414,
